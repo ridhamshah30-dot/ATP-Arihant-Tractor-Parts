@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+
+Customer Registration | ATP Business Portal
+
+</title>
+
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+rel="stylesheet">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link
+href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+
+<section class="register-page">
+
+<div class="container">
+
+<div class="row justify-content-center">
+
+<div class="col-lg-8">
+
+<div class="register-card">
+
+<div class="text-center mb-4">
+
+    <img
+
+    class="site-logo"
+    
+    src="images/logo.png"
+    
+    height="60">
+
+<h2 class="mt-3">
+
+Create Your Account
+
+</h2>
+
+<p>
+
+Register to explore G-Energy products and receive dealer pricing.
+
+</p>
+
+</div>
+
+<form id="registerForm">
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+
+<label>
+
+Full Name *
+
+</label>
+
+<input
+type="text"
+class="form-control"
+id="fullName"
+required>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>
+
+Business / Shop Name
+
+</label>
+
+<input
+type="text"
+class="form-control"
+id="businessName">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>
+
+Mobile Number *
+
+</label>
+
+<input
+type="tel"
+class="form-control"
+id="mobile"
+maxlength="10"
+required>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>
+
+Email Address *
+
+</label>
+
+<input
+type="email"
+class="form-control"
+id="email"
+required>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>
+
+GSTIN (Optional)
+
+</label>
+
+<input
+type="text"
+class="form-control"
+id="gst">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+    <div class="col-md-6 mb-3">
+
+        <label>
+        
+        State *
+        
+        </label>
+        
+        <input
+        type="text"
+        class="form-control"
+        id="state"
+        placeholder="Enter State"
+        required>
+        
+        </div>
+
+City *
+
+</label>
+
+<input
+type="text"
+class="form-control"
+id="city"
+required>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>
+
+Pincode
+
+</label>
+
+<input
+type="text"
+class="form-control"
+id="pincode">
+
+</div>
+
+<div class="col-12 mb-3">
+
+<label>
+
+Address *
+
+</label>
+
+<textarea
+class="form-control"
+rows="3"
+id="address"
+required></textarea>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>
+
+Password *
+
+</label>
+
+<input
+type="password"
+class="form-control"
+id="password"
+required>
+
+</div>
+
+<div class="col-md-6 mb-4">
+
+<label>
+
+Confirm Password *
+
+</label>
+
+<input
+type="password"
+class="form-control"
+id="confirmPassword"
+required>
+
+</div>
+
+<div class="col-12">
+
+<div class="form-check mb-4">
+
+<input
+class="form-check-input"
+type="checkbox"
+required>
+
+<label
+class="form-check-label">
+
+I agree to the Terms & Conditions.
+
+</label>
+
+</div>
+<div
+id="registerMessage"
+class="alert d-none mb-3">
+
+</div>
+<button
+type="submit"
+class="btn btn-danger btn-lg w-100">
+
+Create Account
+
+</button>
+
+</div>
+
+</div>
+
+</form>
+
+<div class="text-center mt-4">
+
+Already have an account?
+
+<a href="login.html">
+
+Login Here
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="js/supabase.js"></script>
+
+<script src="js/settings.js"></script>
+
+<script>
+
+loadWebsiteSettings();
+
+</script>
+
+<script src="js/register.js"></script>
+
+</body>
+
+</html>
