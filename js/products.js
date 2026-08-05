@@ -32,7 +32,8 @@ async function loadProducts(){
     const { data, error } = await db
         .from("products")
         .select("*")
-        .order("id", { ascending: false });
+        .order("id", { ascending: false })
+        .limit(4);
 
     console.log("Supabase Data:", data);
 
@@ -118,13 +119,13 @@ function renderProducts(){
     
     </h5>
     
-    <p>
-    
-    ${product.pack_size||""}
-    
-    ${product.viscosity||""}
-    
-    </p>
+    <p class="product-spec">
+
+${product.pack_size || ""}
+
+${product.viscosity || ""}
+
+</p>
     
     <div class="price">
     

@@ -518,25 +518,27 @@ PRODUCT SECTION
 
     background:#fff;
 
-    border-radius:22px;
+    border-radius:18px;
 
     overflow:hidden;
 
-    box-shadow:var(--shadow-sm);
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
 
-    transition:.35s;
+    display:flex;
+
+    flex-direction:column;
 
     height:100%;
 
-    border:1px solid #eee;
+    transition:.3s;
 
 }
 
 .product-card:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-6px);
 
-    box-shadow:var(--shadow-lg);
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
 
 }
 
@@ -554,9 +556,15 @@ PRODUCT SECTION
 
 .product-image img{
 
-    height:220px;
+    width:100%;
+
+    height:230px;
 
     object-fit:contain;
+
+    display:block;
+
+    margin:auto;
 
     transition:.35s;
 
@@ -588,21 +596,29 @@ PRODUCT SECTION
 
 .product-body{
 
-    padding:25px;
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
 
 }
 
 .product-body h5{
 
-    font-size:20px;
+    font-size:18px;
 
     font-weight:700;
 
-    margin-bottom:12px;
+    margin-bottom:10px;
 
     color:#1f2937;
 
-    min-height:55px;
+    min-height:52px;
+
+    line-height:1.4;
 
 }
 
@@ -615,6 +631,24 @@ PRODUCT SECTION
     min-height:60px;
 
     margin-bottom:18px;
+
+}
+
+.product-spec{
+
+    color:#666;
+
+    font-size:14px;
+
+    min-height:22px;
+
+    
+
+}
+
+.price{
+
+    margin-top:auto;
 
 }
 
@@ -662,7 +696,7 @@ PRODUCT SECTION
 
     border-radius:12px;
 
-    font-weight:600;
+    font-weight:700;
 
     padding:12px;
 
@@ -674,41 +708,34 @@ PRODUCT PRICE
 
 .price{
 
-    display:flex;
+    margin-top:auto;
 
-    align-items:center;
-
-    gap:12px;
-
-    margin-top:18px;
-
-    margin-bottom:10px;
+    margin-bottom:15px;
 
 }
 
-.mrp{
+.price .mrp{
 
-    color:#9CA3AF;
+    color:#9a9a9a;
 
     text-decoration:line-through;
 
-    font-size:16px;
+    font-size:15px;
 
-    font-weight:500;
+    margin-right:10px;
+
+}
+
+.price .selling{
+
+    color:#d11335;
+
+    font-size:32px;
+
+    font-weight:800;
 
 }
 
-.selling{
-
-    color:#d10f2f;
-
-    font-size:34px;
-
-    font-weight:700;
-
-    line-height:1;
-
-}
 
 .product-card{
 
