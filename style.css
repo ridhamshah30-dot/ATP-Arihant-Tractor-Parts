@@ -1781,3 +1781,53 @@ WHATSAPP BUTTON
     color:#fff !important;
 
 } 
+
+/* Floating WhatsApp Button */
+
+.whatsapp-float{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:100px;   /* Above Back-to-Top button */
+
+    width:65px;
+
+    height:65px;
+
+    background:#25D366;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+    z-index:9999;
+
+    transition:all .3s ease;
+
+}
+
+.whatsapp-float i{
+
+    font-size:38px;
+
+    color:#ffffff;
+
+}
+
+.whatsapp-float:hover{
+
+    transform:scale(1.1);
+
+    background:#1EBE5D;
+
+}
