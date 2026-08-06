@@ -1831,3 +1831,62 @@ WHATSAPP BUTTON
     background:#1EBE5D;
 
 }
+.category-section .row{
+
+    overflow-x:auto;
+
+    flex-wrap:nowrap;
+
+    scrollbar-width:none;
+
+}
+
+.category-section .row::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+/*==============================
+KEY FEATURES
+==============================*/
+
+.product-features{
+
+    background:#fff;
+
+    border-radius:12px;
+
+    padding:30px;
+
+    margin-top:30px;
+
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+
+}
+
+.product-features h3{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.product-features ul{
+
+    padding-left:28px;
+
+}
+
+.product-features li{
+
+    margin-bottom:10px;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}

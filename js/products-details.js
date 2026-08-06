@@ -87,6 +87,36 @@ async function renderProduct(product){
     document.getElementById("description").textContent =
         product.description || "-";
 
+/*==========================
+KEY FEATURES
+==========================*/
+
+const featureContainer =
+
+document.getElementById("productFeatures");
+
+featureContainer.innerHTML = "";
+
+if(product.key_features){
+
+    product.key_features
+
+    .split("\n")
+
+    .forEach(feature=>{
+
+        if(feature.trim()!=""){
+
+            featureContainer.innerHTML +=
+
+            `<li>${feature}</li>`;
+
+        }
+
+    });
+
+}
+
     document.getElementById("mrp").textContent =
         Number(product.mrp).toLocaleString("en-IN");
 
