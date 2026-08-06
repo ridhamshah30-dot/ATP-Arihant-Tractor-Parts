@@ -60,9 +60,45 @@ async function loadProducts(){
 
     products = data || [];
 
+    loadBrandFilter();
+
     filteredProducts = [...products];
 
     renderProducts();
+
+}
+
+/*==================================================
+LOAD BRAND FILTER
+==================================================*/
+
+function loadBrandFilter(){
+
+    const dropdown = document.getElementById("brandFilter");
+
+    if(!dropdown) return;
+
+    const brands = [...new Set(
+
+        products
+        .map(product => product.brand)
+        .filter(Boolean)
+
+    )];
+
+    brands.sort();
+
+    brands.forEach(brand => {
+
+        dropdown.innerHTML +=
+
+        `<option value="${brand}">
+
+            ${brand}
+
+        </option>`;
+
+    });
 
 }
 
