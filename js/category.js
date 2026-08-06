@@ -23,17 +23,51 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log("Category =", category);
 console.log("Search =", window.location.search);    
 
-    if (!category) {
+if (!category) {
 
-        category = "Bike";
+    category = "Bike";
 
-    }
+}
 
-    document.getElementById("categoryTitle").innerHTML = category + " Oils";
+let displayName = category;
 
-    document.getElementById("breadcrumbCategory").innerHTML = category + " Oils";
+switch (category) {
 
-    await loadProducts();
+    case "Bike":
+        displayName = "Bike Engine Oils";
+        break;
+
+    case "Car":
+        displayName = "Car Engine Oils";
+        break;
+
+    case "Tractor":
+        displayName = "Tractor Oils";
+        break;
+
+    case "HCV":
+        displayName = "HCV Oils";
+        break;
+
+    case "Grease":
+        displayName = "Greases";
+        break;
+
+    case "Coolant":
+        displayName = "Coolant";
+        break;
+
+    case "Gear Oil":
+        displayName = "Gear Oil";
+        break;
+
+}
+
+document.getElementById("categoryTitle").innerHTML = displayName;
+
+document.getElementById("breadcrumbCategory").innerHTML = displayName;
+
+await loadProducts();
 
 });
 
