@@ -269,102 +269,114 @@ src="images/hero-banner.jpg">
 </div>
 
 </section>
-
 <!--=========================================
 SHOP BY CATEGORY
 =========================================-->
 
-<section
-class="category-section py-5"
-id="products">
+<section class="category-section py-5" id="products">
 
-<div class="container">
-
-<div class="section-title">
-
-<h2>
-
-Shop By Category
-
-</h2>
-
-
-
-</div>
-
-<div class="row g-4 justify-content-center">
-
-    <!-- Bike -->
-    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <a href="category.html?category=Bike" class="text-decoration-none text-dark">
-            <div class="category-card">
-                <img class="category-bike" src="images/bike.jpg" alt="Bike">
-                <h5>Bike</h5>
-            </div>
-        </a>
+    <div class="container">
+    
+    <div class="section-title">
+    <h2>Shop By Category</h2>
     </div>
-
-    <!-- Car -->
-    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <a href="category.html?category=Car" class="text-decoration-none text-dark">
-            <div class="category-card">
-                <img class="category-car" src="images/car.jpg" alt="Car">
-                <h5>Car</h5>
+    
+    <div class="position-relative">
+    
+        <!-- Left Arrow -->
+        <button class="category-arrow left" onclick="scrollCategories(-250)">
+            &#10094;
+        </button>
+    
+        <!-- Slider -->
+        <div
+            id="categorySlider"
+            class="d-flex flex-nowrap overflow-hidden"
+            style="gap:20px;scroll-behavior:smooth;">
+    
+            <!-- Bike -->
+            <div style="min-width:180px;">
+                <a href="category.html?category=Bike" class="text-decoration-none text-dark">
+                    <div class="category-card">
+                        <img class="category-bike" src="images/bike.jpg" alt="Bike">
+                        <h5>Bike</h5>
+                    </div>
+                </a>
             </div>
-        </a>
-    </div>
-
-    <!-- Coolant -->
-    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <a href="category.html?category=Coolant" class="text-decoration-none text-dark">
-            <div class="category-card">
-                <img class="category-coolant" src="images/coolant.jpg" alt="Coolant">
-                <h5>Coolant</h5>
+    
+            <!-- Car -->
+            <div style="min-width:180px;">
+                <a href="category.html?category=Car" class="text-decoration-none text-dark">
+                    <div class="category-card">
+                        <img class="category-car" src="images/car.jpg" alt="Car">
+                        <h5>Car</h5>
+                    </div>
+                </a>
             </div>
-        </a>
-    </div>
-
-    <!-- Tractor -->
-    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <a href="category.html?category=Tractor" class="text-decoration-none text-dark">
-            <div class="category-card">
-                <img class="category-tractor" src="images/tractor.jpg" alt="Tractor">
-                <h5>Tractor</h5>
+    
+            <!-- Coolant -->
+            <div style="min-width:180px;">
+                <a href="category.html?category=Coolant" class="text-decoration-none text-dark">
+                    <div class="category-card">
+                        <img class="category-coolant" src="images/coolant.jpg" alt="Coolant">
+                        <h5>Coolant</h5>
+                    </div>
+                </a>
             </div>
-        </a>
-    </div>
-
-    <!-- HCV -->
-    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <a href="category.html?category=HCV" class="text-decoration-none text-dark">
-            <div class="category-card">
-                <img class="category-hcv" src="images/hcv.jpg" alt="HCV">
-                <h5>HCV</h5>
+    
+            <!-- Tractor -->
+            <div style="min-width:180px;">
+                <a href="category.html?category=Tractor" class="text-decoration-none text-dark">
+                    <div class="category-card">
+                        <img class="category-tractor" src="images/tractor.jpg" alt="Tractor">
+                        <h5>Tractor</h5>
+                    </div>
+                </a>
             </div>
-        </a>
-    </div>
-
-    <!-- Grease -->
-    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <a href="category.html?category=Grease" class="text-decoration-none text-dark">
-            <div class="category-card">
-                <img class="category-grease" src="images/grease.jpg" alt="Grease">
-                <h5>Grease</h5>
+    
+            <!-- HCV -->
+            <div style="min-width:180px;">
+                <a href="category.html?category=HCV" class="text-decoration-none text-dark">
+                    <div class="category-card">
+                        <img class="category-hcv" src="images/hcv.jpg" alt="HCV">
+                        <h5>HCV</h5>
+                    </div>
+                </a>
             </div>
-        </a>
-    </div>
-
-    <!-- Gear Oil -->
-    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <a href="category.html?category=Gear Oil" class="text-decoration-none text-dark">
-            <div class="category-card">
-                <img class="category-gearoil" src="images/gear-oil.jpg" alt="Gear Oil">
-                <h5>Gear Oil</h5>
+    
+            <!-- Grease -->
+            <div style="min-width:180px;">
+                <a href="category.html?category=Grease" class="text-decoration-none text-dark">
+                    <div class="category-card">
+                        <img class="category-grease" src="images/grease.jpg" alt="Grease">
+                        <h5>Grease</h5>
+                    </div>
+                </a>
             </div>
-        </a>
+    
+            <!-- Gear Oil -->
+            <div style="min-width:180px;">
+                <a href="category.html?category=Gear Oil" class="text-decoration-none text-dark">
+                    <div class="category-card">
+                        <img class="category-gearoil" src="images/gear-oil.jpg" alt="Gear Oil">
+                        <h5>Gear Oil</h5>
+                    </div>
+                </a>
+            </div>
+    
+        </div>
+    
+        <!-- Right Arrow -->
+        <button class="category-arrow right" onclick="scrollCategories(250)">
+            &#10095;
+        </button>
+    
     </div>
-
-</div>
+    
+    </div>
+    
+    </section>
+    
     <!--=========================================
     FEATURED PRODUCTS
     ==========================================-->
@@ -1276,6 +1288,17 @@ FOOTER
     
     loadWebsiteSettings();
     
+    </script>
+
+<script>
+    function scrollCategories(distance){
+    
+        document.getElementById("categorySlider").scrollBy({
+            left: distance,
+            behavior: "smooth"
+        });
+    
+    }
     </script>
 
     </body>

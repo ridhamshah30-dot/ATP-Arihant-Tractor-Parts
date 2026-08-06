@@ -14,13 +14,9 @@ LOAD WEBSITE SETTINGS
 async function loadWebsiteSettings() {
 
     const { data, error } = await supabaseClient
-
         .from("settings")
-
         .select("*")
-
         .eq("id", 3)
-
         .single();
 
     if (error) {
@@ -36,48 +32,50 @@ async function loadWebsiteSettings() {
     applyWebsiteSettings();
 
     /*==================================================
-WEBSITE IMAGES
-==================================================*/
+    WEBSITE IMAGES
+    ==================================================*/
 
-const imageMap = {
+    const imageMap = {
 
-    hero_banner: ".hero-banner",
+        hero_banner: ".hero-banner",
 
-    about_image: ".about-image",
+        about_image: ".about-image",
 
-    category_bike: ".category-bike",
+        category_bike: ".category-bike",
 
-    category_car: ".category-car",
+        category_car: ".category-car",
 
-    category_coolant: ".category-coolant",
+        category_coolant: ".category-coolant",
 
-    category_tractor: ".category-tractor",
+        category_tractor: ".category-tractor",
 
-    category_hcv: ".category-hcv",
+        category_hcv: ".category-hcv",
 
-    category_grease: ".category-grease",
+        category_grease: ".category-grease",
 
-    brand_logo: ".brand-logo" , 
+        category_gear_oil: ".category-gearoil",
 
-    footer_logo_1: ".footer-logo-1",
+        brand_logo: ".brand-logo",
 
-    footer_logo_2: ".footer-logo-2"
+        footer_logo_1: ".footer-logo-1",
 
-};
+        footer_logo_2: ".footer-logo-2"
 
-Object.entries(imageMap).forEach(([key, selector]) => {
+    };
 
-    document.querySelectorAll(selector).forEach(img => {
+    Object.entries(imageMap).forEach(([key, selector]) => {
 
-        if (websiteSettings[key]) {
+        document.querySelectorAll(selector).forEach(img => {
 
-            img.src = websiteSettings[key];
+            if (websiteSettings[key]) {
 
-        }
+                img.src = websiteSettings[key];
+
+            }
+
+        });
 
     });
-
-});
 
 }
 
@@ -93,11 +91,7 @@ function applyWebsiteSettings() {
     LOGO
     ==============================*/
 
-    document
-
-    .querySelectorAll(".site-logo")
-
-    .forEach(img => {
+    document.querySelectorAll(".site-logo").forEach(img => {
 
         if (websiteSettings.company_logo) {
 
@@ -111,15 +105,9 @@ function applyWebsiteSettings() {
     COMPANY NAME
     ==============================*/
 
-    document
+    document.querySelectorAll(".company-name").forEach(el => {
 
-    .querySelectorAll(".company-name")
-
-    .forEach(el => {
-
-        el.textContent =
-
-        websiteSettings.company_name || "";
+        el.textContent = websiteSettings.company_name || "";
 
     });
 
@@ -127,15 +115,9 @@ function applyWebsiteSettings() {
     PHONE
     ==============================*/
 
-    document
+    document.querySelectorAll(".company-phone").forEach(el => {
 
-    .querySelectorAll(".company-phone")
-
-    .forEach(el => {
-
-        el.textContent =
-
-        websiteSettings.company_phone || "";
+        el.textContent = websiteSettings.company_phone || "";
 
     });
 
@@ -143,15 +125,9 @@ function applyWebsiteSettings() {
     PHONE 2
     ==============================*/
 
-    document
+    document.querySelectorAll(".company-phone-2").forEach(el => {
 
-    .querySelectorAll(".company-phone-2")
-
-    .forEach(el => {
-
-        el.textContent =
-
-        websiteSettings.company_phone_2 || "";
+        el.textContent = websiteSettings.company_phone_2 || "";
 
     });
 
@@ -159,15 +135,9 @@ function applyWebsiteSettings() {
     EMAIL
     ==============================*/
 
-    document
+    document.querySelectorAll(".company-email").forEach(el => {
 
-    .querySelectorAll(".company-email")
-
-    .forEach(el => {
-
-        el.textContent =
-
-        websiteSettings.company_email || "";
+        el.textContent = websiteSettings.company_email || "";
 
     });
 
@@ -175,15 +145,9 @@ function applyWebsiteSettings() {
     ADDRESS
     ==============================*/
 
-    document
+    document.querySelectorAll(".company-address").forEach(el => {
 
-    .querySelectorAll(".company-address")
-
-    .forEach(el => {
-
-        el.textContent =
-
-        websiteSettings.company_address || "";
+        el.textContent = websiteSettings.company_address || "";
 
     });
 
@@ -191,33 +155,21 @@ function applyWebsiteSettings() {
     ABOUT COMPANY
     ==============================*/
 
-    document
+    document.querySelectorAll(".about-company").forEach(el => {
 
-    .querySelectorAll(".about-company")
-
-    .forEach(el => {
-
-        el.innerHTML =
-
-        websiteSettings.about_company || "";
+        el.innerHTML = websiteSettings.about_company || "";
 
     });
 
     /*==============================
-    WHATSAPP BUTTONS
+    WHATSAPP
     ==============================*/
 
-    document
-
-    .querySelectorAll(".company-whatsapp")
-
-    .forEach(btn => {
+    document.querySelectorAll(".company-whatsapp").forEach(btn => {
 
         if (!websiteSettings.company_whatsapp) return;
 
-        btn.href =
-
-        `https://wa.me/91${websiteSettings.company_whatsapp}`;
+        btn.href = `https://wa.me/91${websiteSettings.company_whatsapp}`;
 
     });
 

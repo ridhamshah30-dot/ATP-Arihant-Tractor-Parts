@@ -457,14 +457,26 @@ CATEGORY SECTION
 .category-card{
     background:#fff;
     border-radius:20px;
-    padding:25px 15px;
+    padding:20px 10px;
     text-align:center;
-    height:220px;
+    height:210px;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.category-card:hover{
+    transform:translateY(-5px);
+}
+
+
+.category-card h5{
+    margin:0;
+    font-size:22px;
+    font-weight:600;
 }
 
 .category-card img{
@@ -474,24 +486,45 @@ CATEGORY SECTION
     margin-bottom:15px;
 }
 
-.category-card:hover{
+/* ===========================
+CATEGORY SLIDER
+=========================== */
 
-    transform:translateY(-8px);
-
-    box-shadow:var(--shadow-lg);
-
+.category-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:#fff;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    cursor:pointer;
+    font-size:22px;
+    z-index:10;
 }
 
+.category-arrow.left{
+    left:10px;
+}
 
+.category-arrow.right{
+    right:10px;
+}
 
-.category-card h5{
+.category-arrow:hover{
+    background:#d11234;
+    color:#fff;
+}
 
-    font-size:18px;
+#categorySlider{
+    scrollbar-width:none;
+    scroll-behavior:smooth;
+}
 
-    font-weight:600;
-
-    color:#222;
-
+#categorySlider::-webkit-scrollbar{
+    display:none;
 }
 
 /*==================================================
